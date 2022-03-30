@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="./assets/style.css"> -->
+    <title>Code Quiz</title>
+</head>
+<body>
+    <!-- main content layout -->
+    <div class="container-fluid" id="mainpg">
+        <div class="row">
+            <div class="col text-left">
+                <a href="#" id="viewHighScore">View High Scores</a>
+            </div>
+            <div class="col text-right" id="timer">
+                <span id="timeLeft">Time: 0</span>
+            </div>
+            <!-- display times up when true-->
+            <div class="col text-right" id="timesUp" style="display: none;">Time's Up!</div>
+        </div>
+        <!-- code quiz box -->
+        <div class="row text-left">
+            <div class="col-md-2"></div>
+              <main class="col-md-8">
+                  <div class="justify-content-center" id="start">
+                      <h1 class="font-weight-bold">Coding Quiz</h1>
+                      <p>Answer the following questions to test your knowledge. Be careful though because each wrong answer will deduct 15 seconds</p>
+                      <button type="button" class="btn btn-dark align-center" id="start-quiz-button">Start Quiz</button>
+                  </div>
+
+                  <!-- quiz questions box -->
+                  <div id="questionDiv" style="display: none;">
+                    <p class="justify-content-center font-weight-bold" id="questionTitle"></p>
+                    <div class="justify-content-center">
+                        <p><button class="btn btn-dark" id="btn0"></button></p>
+                        <p><button class="btn btn-dark" id="btn1"></button></p>
+                        <p><button class="btn btn-dark" id="btn2"></button></p>
+                        <p><button class="btn btn-dark" id="btn3"></button></p>
+                        <!-- display correct or wrong under line break -->
+                        <hr id="lineBreak" style="display: none" class="mt-2">
+                        <p id="answerCheck" style="display: none;"></p>
+                    </div>
+                  </div>
+
+                  <!-- box for current score -->
+                    <div class="justify-content-center font-weight-bold" id="score-box" style="display: none;">
+                        <div class="col-2"></div>
+                        <div class="col-8 text-left">
+                            <h2 class="font-weight-bold">Your final score is <span id="finalScore"></span> !</h2>
+                            <form>
+                                <p>Enter your initials: <input class="form-control" id="initialInput" type="text">
+                                <button type="submit" id="submitInitialBtn" class="btn btn-dark">Submit</button>
+                                </p>
+                            </form>
+                        </div>
+                    <div class="col-2"></div>
+                </div>
+
+                <!-- box for high scores -->
+                <div class="justify-content-center font-weight-bold" id="highScoreSection"  style="display: none;">
+                    <h2 class="font-weight-bold">High Scores</h2>                   
+                    
+                    <div id="listOfHighScores" class="list-group list-group-flush"></div>
+                    <p>
+                        <button type="submit" class="btn btn-dark" id="goBackBtn">Go Back</button>
+                        <button type="submit" class="btn btn-dark" id="clearHighScoreBtn">Clear Scores</button>
+                    </p>
+                    </div>
+              </main>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+<script src="./assets/script.js"></script>
+</body>
+</html>
