@@ -244,6 +244,7 @@ function showHighScores() {
 
     var storedHighScores = JSON.parse(savedHighScores);
     // for loop to create p elements that will display scores that have been stored
+    
     for (; i < storedHighScores.length; i++) {
         var eachNewHighScore = document.createElement("p");
         eachNewHighScore.innerHTML = storedHighScores[i].initials + ": " + storedHighScores[i].score;
